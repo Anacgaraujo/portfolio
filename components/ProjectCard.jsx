@@ -26,12 +26,14 @@ const ProjectCard = ({ project }) => {
             >
               <Link2Icon className='text-white' />
             </Link>
-            <Link
-              href={project.github}
-              className='bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300'
-            >
-              <Github className='text-white' />
-            </Link>
+            {project.github && (
+              <Link
+                href={project.github}
+                className='bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300'
+              >
+                <Github className='text-white' />
+              </Link>
+            )}
           </div>
         </div>
       </CardHeader>
